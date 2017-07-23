@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WeatherVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherVC" customModule="RainnyShinyCloudy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,169 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbb-Ev-kdC">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="sai-Tk-7Za">
+                                        <rect key="frame" x="20" y="20" width="214.5" height="260"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today, July 22 2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="R2c-pU-BRE">
+                                                <rect key="frame" x="0.0" y="0.0" width="214.5" height="53"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="21"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40.0°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="4RI-UJ-JQF">
+                                                <rect key="frame" x="0.0" y="53" width="214.5" height="152"/>
+                                                <fontDescription key="fontDescription" name="Cochin-Bold" family="Cochin" pointSize="60"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nea Filadelfeia, Athens" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="E97-CR-JEr">
+                                                <rect key="frame" x="0.0" y="205" width="214.5" height="55"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="M1Y-Vo-koC">
+                                        <rect key="frame" x="244.5" y="85" width="120" height="180"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eC7-8W-Zx4">
+                                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="120" id="M8k-NE-WX3"/>
+                                                    <constraint firstAttribute="height" constant="120" id="qeL-wB-1Yu"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rainy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIY-lI-imo">
+                                                <rect key="frame" x="0.0" y="154.5" width="120" height="25.5"/>
+                                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="22"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.5" blue="1" alpha="0.54304901541095896" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="M1Y-Vo-koC" firstAttribute="top" secondItem="dbb-Ev-kdC" secondAttribute="top" constant="85" id="3C6-lG-ojL"/>
+                                    <constraint firstAttribute="bottom" secondItem="M1Y-Vo-koC" secondAttribute="bottom" constant="35" id="7kE-fV-A4N"/>
+                                    <constraint firstAttribute="height" constant="300" id="GTO-Jg-IAi"/>
+                                    <constraint firstItem="M1Y-Vo-koC" firstAttribute="leading" secondItem="sai-Tk-7Za" secondAttribute="trailing" constant="10" id="gkO-eo-1Gg"/>
+                                    <constraint firstAttribute="bottom" secondItem="sai-Tk-7Za" secondAttribute="bottom" constant="20" id="j2n-Ea-Zz4"/>
+                                    <constraint firstItem="sai-Tk-7Za" firstAttribute="top" secondItem="dbb-Ev-kdC" secondAttribute="top" constant="20" id="pNM-qh-ex2"/>
+                                    <constraint firstItem="sai-Tk-7Za" firstAttribute="leading" secondItem="dbb-Ev-kdC" secondAttribute="leading" constant="20" id="xAw-kV-y4g"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gz6-3s-1lB">
+                                <rect key="frame" x="0.0" y="300" width="375" height="367"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="lkl-0h-7uc" customClass="WeatherCell" customModule="RainnyShinyCloudy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkl-0h-7uc" id="IrT-EF-4FA">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ni7-9u-b3S">
+                                                    <rect key="frame" x="16" y="16.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="5gF-qL-IYv"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Kbg-af-OA9"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0SL-6v-WBU">
+                                                    <rect key="frame" x="74" y="18.5" width="283" height="46"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vIc-Gp-7eb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="242" height="46"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Wensday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFJ-Rl-d3q">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="242" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Sunny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSY-mJ-AUb">
+                                                                    <rect key="frame" x="0.0" y="24" width="242" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FTa-cp-25m">
+                                                            <rect key="frame" x="242" y="0.0" width="41" height="46"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="42.2°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhy-B3-efA">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="24"/>
+                                                                    <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="45.2°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7H-7W-IH7">
+                                                                    <rect key="frame" x="0.0" y="24" width="41" height="22"/>
+                                                                    <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="19"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="0SL-6v-WBU" secondAttribute="bottom" constant="10" id="8vC-YV-6zW"/>
+                                                <constraint firstItem="ni7-9u-b3S" firstAttribute="top" secondItem="IrT-EF-4FA" secondAttribute="topMargin" constant="8" id="ENB-Yx-TcC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ni7-9u-b3S" secondAttribute="bottom" constant="8" id="FpX-7E-fTP"/>
+                                                <constraint firstItem="0SL-6v-WBU" firstAttribute="leading" secondItem="ni7-9u-b3S" secondAttribute="trailing" constant="8" id="JTH-Pq-THu"/>
+                                                <constraint firstItem="0SL-6v-WBU" firstAttribute="top" secondItem="IrT-EF-4FA" secondAttribute="topMargin" constant="10" id="QuC-Df-FqT"/>
+                                                <constraint firstItem="ni7-9u-b3S" firstAttribute="leading" secondItem="IrT-EF-4FA" secondAttribute="leadingMargin" constant="8" id="mbC-j1-psO"/>
+                                                <constraint firstItem="0SL-6v-WBU" firstAttribute="centerY" secondItem="ni7-9u-b3S" secondAttribute="centerY" id="rzg-TJ-3zl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="0SL-6v-WBU" secondAttribute="trailing" constant="10" id="xIz-Wk-2Kf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="dayLabel" destination="zFJ-Rl-d3q" id="1rP-Ii-SnT"/>
+                                            <outlet property="highTemp" destination="Uhy-B3-efA" id="acf-TO-GLm"/>
+                                            <outlet property="lowTemp" destination="F7H-7W-IH7" id="W2M-Z8-JOZ"/>
+                                            <outlet property="weatherIcon" destination="ni7-9u-b3S" id="OvT-fc-p0h"/>
+                                            <outlet property="weatherType" destination="mSY-mJ-AUb" id="qhW-NR-PQu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gz6-3s-1lB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CZd-WV-Q0i"/>
+                            <constraint firstAttribute="trailing" secondItem="gz6-3s-1lB" secondAttribute="trailing" id="Ei7-NE-Y4u"/>
+                            <constraint firstItem="gz6-3s-1lB" firstAttribute="top" secondItem="dbb-Ev-kdC" secondAttribute="bottom" id="jHE-Ta-aBC"/>
+                            <constraint firstAttribute="trailing" secondItem="dbb-Ev-kdC" secondAttribute="trailing" id="kdS-fZ-ReH"/>
+                            <constraint firstItem="dbb-Ev-kdC" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="m92-q2-Mtm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gz6-3s-1lB" secondAttribute="bottom" id="oXX-eW-P2y"/>
+                            <constraint firstItem="dbb-Ev-kdC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xCQ-0T-C7U"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTempLbl" destination="4RI-UJ-JQF" id="sx7-by-PaN"/>
+                        <outlet property="currentWeatherImage" destination="eC7-8W-Zx4" id="yhy-5f-opM"/>
+                        <outlet property="currentWeatherLbl" destination="HIY-lI-imo" id="foa-pl-z8r"/>
+                        <outlet property="dateLbl" destination="R2c-pU-BRE" id="52f-Oe-oT4"/>
+                        <outlet property="locationLbl" destination="E97-CR-JEr" id="GcT-iE-ZwP"/>
+                        <outlet property="weatherTableView" destination="gz6-3s-1lB" id="GmD-ng-JFB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
